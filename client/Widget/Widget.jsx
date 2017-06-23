@@ -1,9 +1,15 @@
 import React from 'react';
 import { string } from 'prop-types';
+import Button from 'react-bootstrap/lib/Button';
+import './Widget.css';
 
 const Widget = props => (
-  <div>
-    <h4>{`${props.size} ${props.finish} ${props.category}`}</h4>
+  <div className="widget-container">
+    <h5 className="title">{`${props.size} ${props.finish} ${props.category}`}</h5>
+    <div className="icon" style={{ backgroundColor: props.finish }} />
+    <div className="cart-btn-container">
+      <Button bsStyle="primary">Add to Cart</Button>
+    </div>
   </div>
 );
 
