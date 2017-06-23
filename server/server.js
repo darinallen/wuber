@@ -2,8 +2,12 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+const models = require('./models');
 
 const app = express();
+
+mongoose.connect('mongodb://localhost/wuber');
 
 app.use(morgan('dev'));
 
@@ -15,6 +19,15 @@ app.use(bodyParser.json());
 
 // server static files
 app.use(express.static(path.join(__dirname, '../public')));
+
+app.get('/api/widgets', function(req, res) {
+  models.Widget.find(function(err, widgets) {
+    if (err) {
+      return console.error(err);
+    }
+    res.json(widgets);
+  });
+});
 
 // Always return index.html so react-router renders the route in the client
 app.get('*', function(req, res) {
