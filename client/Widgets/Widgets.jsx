@@ -1,13 +1,16 @@
 import React from 'react';
 import Widget from '../Widget/Widget';
 import mockData from '../../data.json';
-import './Widgets.css';
 
-const Widgets = () => (
+const Widgets = props => (
   <div className="widgets-content">
-    {mockData.map(widget => (
-      <Widget category={widget.category} finish={widget.finish} size={widget.size} key={widget.id} />
-    ))}
+    {mockData
+      .filter(
+        widget =>
+          `${widget.finish} ${widget.size}`.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >= 0 &&
+          (widget.category === props.categorySelected || props.categorySelected === 'all')
+      )
+      .map(widget => <Widget category={widget.category} finish={widget.finish} size={widget.size} key={widget.id} />)}
   </div>
 );
 

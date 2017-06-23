@@ -1,4 +1,12 @@
-.greeting {
+.main-content {
   margin-left: 70px;
   margin-right: 70px;
+}
+
+.greeting {
+  margin-bottom: 30px;
+}
+
+.form {
+  max-width: 300px;
 }
