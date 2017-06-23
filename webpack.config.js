@@ -13,7 +13,11 @@ module.exports = {
   devServer: {
     hot: true, // Make it a hot server
     publicPath: '/public/', // let webpack know where the bundle will be served from
-    historyApiFallback: true // 404s will fallback to index.html
+    historyApiFallback: true, // 404s will fallback to index.html
+    port: 8081,
+    proxy: {
+      '*': 'http://127.0.0.1:8080'
+    }
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css']
