@@ -1,6 +1,6 @@
 .widget-container {
-  height: 200px;
-  width: 200px;
+  height: 210px;
+  width: 210px;
   border: 1px solid lightgrey;
   border-radius: 5px;
   padding: 10px;
@@ -11,7 +11,7 @@
 }
 
 .title {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   text-align: center;
   text-transform: capitalize;
 }
@@ -21,7 +21,7 @@
   width: 50px;
   border-radius: 100%;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .cart-btn-container {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FormGroup from 'react-bootstrap/lib/FormGroup';
 import FormControl from 'react-bootstrap/lib/FormControl';
 import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import { arrayOf, any } from 'prop-types';
 import Navigation from '../Navigation/Navigation';
 import Widgets from '../Widgets/Widgets';
 import './Home.css';
@@ -56,11 +57,20 @@ class Home extends Component {
               </FormControl>
             </FormGroup>
           </form>
-          <Widgets searchTerm={this.state.searchTerm} categorySelected={this.state.categorySelected} />
+          <Widgets
+            widgetData={this.props.widgetData}
+            searchTerm={this.state.searchTerm}
+            categorySelected={this.state.categorySelected}
+          />
         </main>
       </div>
     );
   }
 }
+
+// Ideally, 'any' should be replaced with the actual shape
+Home.propTypes = {
+  widgetData: arrayOf(any).isRequired
+};
 
 export default Home;
