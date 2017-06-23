@@ -41,7 +41,7 @@ class Home extends Component {
               />
               <FormControl.Feedback />
             </FormGroup>
-            <FormGroup controlId="formControlsSelect">
+            <FormGroup className="form-select" controlId="formControlsSelect">
               <ControlLabel>Select a Category</ControlLabel>
               <FormControl
                 componentClass="select"

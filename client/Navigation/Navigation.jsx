@@ -15,8 +15,9 @@ const Navigation = () => (
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
-        <NavItem eventKey={1} href="#">Link</NavItem>
-        <NavItem eventKey={2} href="#">Link</NavItem>
+        <LinkContainer to="/add">
+          <NavItem eventKey={1} href="#">Add</NavItem>
+        </LinkContainer>
       </Nav>
       <Nav pullRight>
         <LinkContainer to="/cart">
