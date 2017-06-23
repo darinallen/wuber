@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../Home/Home';
-import About from '../About/About';
+import Cart from '../Cart/Cart';
 
 const FourOhFour = () => <h1>404</h1>;
 
@@ -10,7 +10,7 @@ const App = () => (
     <div>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/cart" component={Cart} />
         <Route component={FourOhFour} />
       </Switch>
     </div>
