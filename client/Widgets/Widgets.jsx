@@ -8,7 +8,7 @@ const Widgets = props => (
       .filter(
         widget =>
           `${widget.finish} ${widget.size}`.toLowerCase().indexOf(props.searchTerm.toLowerCase()) >= 0 &&
-          (widget.category === props.categorySelected || props.categorySelected === 'all')
+          (widget.category.toLowerCase() === props.categorySelected.toLowerCase() || props.categorySelected === 'all')
       )
       .map(widget => <Widget category={widget.category} finish={widget.finish} size={widget.size} key={widget._id} />)}
   </div>

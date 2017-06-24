@@ -1,0 +1,24 @@
+.hero {
+  background-image: url("../images/Banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 344px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.hero-text {
+  padding-left: 100px;
+  padding-top: 110px;
+}
+
+.hero-title {
+  font-size: 72px;
+  color: #CC4F0D;
+  margin-top: 0;
+}
+
+.hero-subtitle {
+  color: #333;
+  margin-top: 10px;
+}

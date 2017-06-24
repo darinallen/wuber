@@ -3,10 +3,6 @@
   margin-right: 30px;
 }
 
-.greeting {
-  margin-bottom: 30px;
-}
-
 .form {
   max-width: 400px;
   min-width: 280px;
@@ -14,5 +10,5 @@
 }
 
 .form-select {
-  width: 200px;
+  width: 150px;
 }

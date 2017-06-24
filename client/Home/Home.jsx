@@ -5,6 +5,7 @@ import ControlLabel from 'react-bootstrap/lib/ControlLabel';
 import { arrayOf, any } from 'prop-types';
 import Navigation from '../Navigation/Navigation';
 import Widgets from '../Widgets/Widgets';
+import Hero from '../Hero/Hero';
 import './Home.css';
 
 class Home extends Component {
@@ -30,18 +31,9 @@ class Home extends Component {
     return (
       <div>
         <Navigation />
+        <Hero title="Wuber" subtitle="The Uber for Widgets" />
         <main className="main-content">
-          <h1 className="greeting">Wuber: the Uber of Widgets</h1>
           <form className="form">
-            <FormGroup controlId="formBasicText">
-              <FormControl
-                type="text"
-                value={this.state.searchTerm}
-                placeholder="Search for a widget by size or finish"
-                onChange={this.handleSearch}
-              />
-              <FormControl.Feedback />
-            </FormGroup>
             <FormGroup className="form-select" controlId="formControlsSelect">
               <ControlLabel>Select a Category</ControlLabel>
               <FormControl
@@ -55,6 +47,15 @@ class Home extends Component {
                 <option value="widget elite">Widget Elite</option>
                 <option value="widget extreme">Widget Extreme</option>
               </FormControl>
+            </FormGroup>
+            <FormGroup controlId="formBasicText">
+              <FormControl
+                type="text"
+                value={this.state.searchTerm}
+                placeholder="Search for a widget by size or finish"
+                onChange={this.handleSearch}
+              />
+              <FormControl.Feedback />
             </FormGroup>
           </form>
           <Widgets

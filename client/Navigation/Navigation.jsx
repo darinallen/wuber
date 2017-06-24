@@ -4,9 +4,10 @@ import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
+import './Navigation.css';
 
 const Navigation = () => (
-  <Navbar inverse staticTop collapseOnSelect>
+  <Navbar className="navigation" inverse staticTop collapseOnSelect>
     <Navbar.Header>
       <Navbar.Brand>
         <Link to="/">Wuber</Link>

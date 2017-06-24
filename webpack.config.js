@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 
 module.exports = {
   context: __dirname, // always run webpack from the root directory
@@ -11,13 +10,8 @@ module.exports = {
     publicPath: '/public/'
   },
   devServer: {
-    hot: true, // Make it a hot server
     publicPath: '/public/', // let webpack know where the bundle will be served from
-    historyApiFallback: true, // 404s will fallback to index.html
-    port: 8081,
-    proxy: {
-      '*': 'http://127.0.0.1:8080'
-    }
+    historyApiFallback: true // 404s will fallback to index.html
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css']
@@ -26,10 +20,6 @@ module.exports = {
     colors: true,
     reasons: true // Gives more useful errors
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(), // Gives ability to make hot connectors
-    new webpack.NamedModulesPlugin() // Sends down names of modules being hot replaced
-  ],
   module: {
     rules: [
       {
@@ -45,6 +35,10 @@ module.exports = {
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.png$/,
+        loader: 'url-loader?mimetype=image/png'
       }
     ]
   }
