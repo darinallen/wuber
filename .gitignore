@@ -1,6 +1,4 @@
 node_modules/
 public/bundle.js
-bundle.js
 .DS_Store
 .eslintcache
-variables.env
