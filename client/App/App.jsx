@@ -15,24 +15,20 @@ class App extends Component {
       widgetData: [],
       orderData: []
     };
-    this.getWidgets = this.getWidgets.bind(this);
-    this.addWidget = this.addWidget.bind(this);
-    // this.getOrder = this.getOrder.bind(this);
   }
 
   componentDidMount() {
     this.getWidgets();
-    // this.getOrder();
   }
 
-  getWidgets() {
+  getWidgets = () => {
     axios.get('api/widgets').then(res => {
       this.setState({ widgetData: res.data });
     });
-  }
+  };
 
   // For now, default to quantity of 1
-  addWidget(newCategory, newFinish, newSize) {
+  addWidget = (newCategory, newFinish, newSize) => {
     axios
       .post('api/widget', {
         category: newCategory,
@@ -46,13 +42,7 @@ class App extends Component {
       .catch(err => {
         console.log(`post request error: ${err}`);
       });
-  }
-
-  // getOrder() {
-  //   axios.get('/api/order').then(res => {
-  //     this.setState({ orderData: res.data });
-  //   });
-  // }
+  };
 
   render() {
     return (

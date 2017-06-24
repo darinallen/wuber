@@ -16,27 +16,24 @@ class Add extends Component {
       finishSelected: 'red',
       sizeSelected: 'small'
     };
-    this.handleCategorySelect = this.handleCategorySelect.bind(this);
-    this.handleFinishSelect = this.handleFinishSelect.bind(this);
-    this.handleSizeSelect = this.handleSizeSelect.bind(this);
-    this.handleAddClick = this.handleAddClick.bind(this);
   }
 
-  handleCategorySelect(e) {
+  handleCategorySelect = e => {
     this.setState({ categorySelected: e.target.value });
-  }
+  };
 
-  handleFinishSelect(e) {
+  handleFinishSelect = e => {
     this.setState({ finishSelected: e.target.value });
-  }
+  };
 
-  handleSizeSelect(e) {
+  handleSizeSelect = e => {
     this.setState({ sizeSelected: e.target.value });
-  }
+  };
 
-  handleAddClick() {
+  handleAddClick = () => {
     this.props.addWidget(this.state.categorySelected, this.state.finishSelected, this.state.sizeSelected);
-  }
+    alert('Your widget has been added!');
+  };
 
   render() {
     return (
