@@ -1,9 +1,9 @@
-const mongoose = require('mongoose');
-const models = require('./server/models');
+var mongoose = require('mongoose');
+var models = require('./server/models');
 
 mongoose.connect('mongodb://localhost/wuber');
 
-const widgets = [
+var widgets = [
   new models.Widget({ category: 'Widget Prime', finish: 'red', size: 'large', quantity: 4 }),
   new models.Widget({ category: 'Widget Elite', finish: 'blue', size: 'small', quantity: 7 }),
   new models.Widget({ category: 'Widget Extreme', finish: 'green', size: 'huge', quantity: 1 }),
@@ -13,7 +13,7 @@ const widgets = [
 ];
 
 // Save each document in the array and disconnect if it's the last item
-for (let i = 0; i < widgets.length; i++) {
+for (var i = 0; i < widgets.length; i++) {
   widgets[i].save(() => {
     if (i === widgets.length - 1) {
       console.log('Seeding complete');

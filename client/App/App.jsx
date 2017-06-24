@@ -26,7 +26,7 @@ class App extends Component {
   }
 
   getWidgets() {
-    axios.get('http://localhost:3000/api/widgets').then(res => {
+    axios.get('api/widgets').then(res => {
       this.setState({ widgetData: res.data });
     });
   }
@@ -34,7 +34,7 @@ class App extends Component {
   // For now, default to quantity of 1
   addWidget(newCategory, newFinish, newSize) {
     axios
-      .post('http://localhost:3000/api/widget', {
+      .post('api/widget', {
         category: newCategory,
         finish: newFinish,
         size: newSize,
