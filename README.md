@@ -2,7 +2,7 @@
 
 ## Run Mongo Daemon
 
-Ensure you have MongoDB installed and run the Mongo daemon
+After cloning the repo, ensure you have MongoDB installed and run the Mongo daemon
 <pre><code>
 $ mongod
 </code></pre>
