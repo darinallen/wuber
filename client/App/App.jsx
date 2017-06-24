@@ -41,7 +41,6 @@ class App extends Component {
         quantity: 1
       })
       .then(res => {
-        console.log(`post response data: ${JSON.stringify(res.data)}`);
         this.setState({ widgetData: res.data });
       })
       .catch(err => {
