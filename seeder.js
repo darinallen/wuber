@@ -13,9 +13,11 @@ var widgets = [
 ];
 
 // Save each document in the array and disconnect if it's the last item
+var done = 0;
 for (var i = 0; i < widgets.length; i++) {
   widgets[i].save(() => {
-    if (i === widgets.length - 1) {
+    done++;
+    if (done === widgets.length) {
       console.log('Seeding complete');
       mongoose.disconnect();
     }
