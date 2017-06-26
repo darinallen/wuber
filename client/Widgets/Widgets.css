@@ -1,3 +1,6 @@
-.widgets-content {
-  margin: 50px;
+@media (max-width: 600px) {
+  .widgets-content {
+    width: 210px;
+    margin: 0 auto;
+  }
 }

@@ -41,7 +41,7 @@ class Add extends Component {
         <Navigation />
         <Hero title="Add" subtitle="Add New Widgets" />
         <div className="add-content">
-          <h1>Add a new widget to the inventory</h1>
+          <h2>Add a new widget to the inventory</h2>
           <form className="add-form">
             <FormGroup className="category-select" controlId="formControlsSelect">
               <ControlLabel>Select a Category</ControlLabel>

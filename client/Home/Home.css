@@ -5,10 +5,17 @@
 
 .form {
   max-width: 400px;
-  min-width: 280px;
+  min-width: 270px;
   margin-bottom: 40px;
 }
 
 .form-select {
-  width: 150px;
+  max-width: 270px;
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    margin: 0 auto;
+    width: 270px;
+  }
 }

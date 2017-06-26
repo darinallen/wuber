@@ -1,6 +1,7 @@
 import React from 'react';
 import { arrayOf, any } from 'prop-types';
 import Widget from '../Widget/Widget';
+import './Widgets.css';
 
 const Widgets = props => (
   <div className="widgets-content">

@@ -52,7 +52,7 @@ class Home extends Component {
               <FormControl
                 type="text"
                 value={this.state.searchTerm}
-                placeholder="Search for a widget by size or finish"
+                placeholder="Search by size or finish"
                 onChange={this.handleSearch}
               />
               <FormControl.Feedback />

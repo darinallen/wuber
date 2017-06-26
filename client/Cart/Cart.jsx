@@ -8,7 +8,7 @@ const Cart = () => (
     <Navigation />
     <Hero title="Cart" subtitle="Place an Order" />
     <div className="cart-content">
-      <h1>Welcome to the Cart page</h1>
+      <h2>Welcome to the Cart page</h2>
     </div>
   </div>
 );
