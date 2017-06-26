@@ -53,7 +53,7 @@ app.post('/api/widget', function(req, res) {
 
 // Always return index.html so react-router renders the route in the client
 app.get('*', function(req, res) {
-  res.sendFile(path.resolve(__dirname, '..', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '..', 'public/index.html'));
 });
 
 const PORT = process.env.PORT || 3000;

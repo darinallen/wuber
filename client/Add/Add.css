@@ -1,10 +1,12 @@
 .add-content {
   margin-left: 70px;
   margin-right: 70px;
+  padding-bottom: 50px;
 }
 
 .add-form {
   max-width: 400px;
   min-width: 280px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
